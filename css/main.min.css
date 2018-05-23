@@ -5730,6 +5730,27 @@ div#scroll .map_list li span {
     text-decoration: underline
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width:1800px) {
     .all_place,
     .all_place.map,
@@ -5738,8 +5759,9 @@ div#scroll .map_list li span {
     .hotel_wr,
     .menu {
         padding-bottom: 40px;
-        height: -webkit-calc(100vh - 50px);
-        height: calc(100vh - 50px)
+        min-height: -webkit-calc(100vh - 50px);
+        min-height: calc(100vh - 50px);
+        height: auto;
     }
     .menu_item_img a>span {
         font-size: 11px;
@@ -5846,13 +5868,26 @@ div#scroll .map_list li span {
         width: 15.2px;
         height: 15.4px
     }
+    div#scroll {
+
+        overflow: auto;
+        margin-bottom: 20px;
+    }
+    div#scroll::-webkit-scrollbar {
+        display: none;
+    }
 }
 
-@media only screen and (max-width:1270px) {
-
+@media only screen and (max-width:1281px) {
+    footer {
+        position: relative!important;
+        bottom: 0;
+        z-index: 100
+    }
 }
 
 .bold {font-weight: 600; margin-left: 4px;}
 .start_page .logo_panel {
     width: 679px;
 }
+
