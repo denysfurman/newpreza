@@ -1,0 +1,375 @@
+header{
+  width: 100%;
+  height: 100px;
+  position: relative;
+  background-color: #175ed3;
+  .logo_span{
+    position: absolute;
+    left: 63px;
+    color: #fff;
+    z-index: 101;
+    font-size: 16px;
+    top: 29px;
+    font-weight: 200;
+    letter-spacing: 0.4px;
+
+
+    b{
+      font-weight: 500!important;
+      font-size: 28px;
+      text-transform: uppercase;
+      margin-right: 10px;
+      position: relative;
+      top: 3px;
+    }
+  }
+}
+
+
+body {
+
+  &.search-active {
+    overflow: hidden;
+    height: 100vh;
+    .container{
+      display: none;
+    }
+
+    .search-input {
+      opacity: 1;
+      transform: none;
+      pointer-events: all;
+    }
+    .icon-close {
+      opacity: 1;
+      transform: rotate(-90deg);
+    }
+    .control {
+      cursor: default;
+      height: 100vh;
+      position: relative;
+      .btn-material {
+        transform: scale(70);
+        background-image: none;
+
+      }
+      .icon-material-search {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+$color-header: #22313F;
+$color-button: #2b3240;
+$color-placeholder: #EEE;
+$btn-material-size: 60px;
+
+/* Close Icon */
+
+.icon-close {
+  position: absolute;
+  top: 30px;
+  right: 130px;
+  width: 35px;
+  height: 35px;
+  opacity: 0;
+
+  z-index: 101;
+  cursor: pointer;
+  img{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+  }
+
+}
+
+
+/* Search Input */
+
+.search-input {
+  height: 80px;
+  position: absolute;
+  top: 20%;
+  left: 80px;
+  margin-top: -40px;
+  pointer-events: none;
+  opacity: 0;
+
+
+
+  z-index: 15;
+  border-bottom: 1px solid #FFF;
+  width: calc(100% - 200px);
+
+
+  z-index: 15;
+  input {
+    color: #fff;
+    font-size: 54px;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    outline: 0;
+    font-weight: 200;
+    width: 100%;
+    line-height: 80px;
+    border-color: #fff;
+  }
+  ::-webkit-input-placeholder {
+    color: $color-placeholder;
+  }
+  :-moz-placeholder {
+    color: $color-placeholder;
+    opacity: 1;
+  }
+  ::-moz-placeholder {
+    color: $color-placeholder;
+    opacity: 1;
+  }
+  :-ms-input-placeholder {
+    color: $color-placeholder;
+  }
+}
+
+
+/* Container */
+
+.container {
+  width: 100%;
+  position: relative;
+  z-index: 14;
+  max-width: 100%;
+  &.container-dark {
+    background: $color-header;
+    color: #FFF;
+  }
+}
+.chart_wr:last-child{
+  margin-bottom: 100px;
+}
+
+
+/* Control btn */
+
+.control {
+
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 2px;
+
+  .btn-material {
+    position: absolute;
+    top: 20px;
+    width: $btn-material-size;
+    height: $btn-material-size;
+    right: $btn-material-size;
+    border-radius: 100%;
+    box-sizing: border-box;
+    background: #447cda;
+    outline: 0;
+    transform-origin: 50%;
+    display: inline-block;
+    z-index: 10;
+    transition: all 0.7s ease;
+    cursor: pointer;
+
+
+  }
+  .icon-material-search {
+    color: #fff;
+    position: absolute;
+    top: 37px;
+    right: 75px;
+
+    transition: opacity .2s ease-in-out;
+    width: 27px;
+    z-index: 11;
+    cursor: pointer;
+  }
+}
+
+
+/* Utilities */
+
+.p-y-md {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+
+footer{
+  width: 100%;
+  height: 100px;
+  background: #181c24;
+  position: relative;
+  overflow: hidden;
+  .home{
+    position: absolute;
+    left: calc(50% - 85px);
+    top: -30px;
+    &:hover{
+      opacity: 0.7;
+    }
+    &:hover{
+      transform: scale(0.95);
+
+    }
+
+  }
+}
+.lang{
+  float: right;
+  padding-right: 40px;
+  display: flex;
+  ul{
+    display: flex;
+    li{
+      margin-right: 10px;
+      a{
+        padding: 10px;
+        border: 1px solid #595959;
+        margin-top: 30px;
+        opacity: 0.4;
+        &.active{
+          opacity: 1;
+          background-color: #32363f;
+          border: none;
+        }
+      }
+    }
+  }
+  .timer{
+
+    background-color: #32363f;
+    color: #fff;
+    height: 48px;
+    margin-top: 30px;
+    padding:  0 20px;
+    line-height: 48px;
+    margin-left: 40px;
+  }
+
+}
+
+.back_footer{
+  height: 42px;
+  box-shadow: 0 2px 5px rgba(13, 24, 41, 0.15);
+  border-radius: 20px;
+  background-color: #32363f;
+  background-image: linear-gradient(to top, #f5f7f8 0%, #ffffff 100%);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0 30px;
+  color: #bcc5d2;
+  margin-left: 40px;
+  margin-top: 34px;
+  transition: transform 0.2s ease-in-out;
+  &:hover{
+    color: #bcc5d2;
+    transform: scale(0.95);
+  }
+  i{
+    margin-right: 10px;
+    position: relative;
+    top: -1px
+  }
+}
+
+.start_page{
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/BG_shad.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 0 150px;
+  flex-direction: row;
+  justify-content: center;
+
+  .logo_panel{
+    display: flex;
+    width: 800px;
+    height: 100vh;
+    align-content:left;
+    align-items: left;
+    flex-direction: column;
+    justify-content: center;
+    float: left;
+
+    span{
+      color: #175ed3;
+      height: 180px;
+      font-size: 300px;
+      font-weight: 500;
+      line-height: 30px;
+      text-transform: uppercase;
+      margin-left: -12px;
+      position: relative;
+      &:before{
+        content: "";
+        position: absolute;
+        top: -107px;
+        display: inline-block;
+        height: 100px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.08);
+        z-index: 1;
+      }
+    }
+    p{
+      color: #464646;
+      font-weight: 200;
+      font-size: 60px;
+      margin-bottom: 0;
+
+    }
+
+
+  }
+}
+
+.start_panel{
+  display: flex;
+
+  width: 800px;
+  height: 100vh;
+  align-content: center;
+  align-items: center;
+
+  justify-content: center;
+  position: relative;
+  a{
+    position: absolute;
+    top: 0;
+    top: 38px;
+    left: 123px;
+    width: auto;
+    height: 161px;
+
+    overflow: hidden;
+
+    img{
+      transition: animation 2s ease ;
+      animation: start 3.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    }
+
+  }
+
+}
+
+@keyframes start{
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
