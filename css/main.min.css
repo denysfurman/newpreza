@@ -3671,23 +3671,23 @@ html {
 }
 
 ::-webkit-input-placeholder {
-    color: #96a2b0
+    color: #fff
 }
 
 ::-moz-placeholder {
-    color: #96a2b0
+    color: #fff
 }
 
 :-ms-input-placeholder {
-    color: #96a2b0
+    color: #fff
 }
 
 ::-ms-input-placeholder {
-    color: #96a2b0
+    color: #fff
 }
 
 ::placeholder {
-    color: #96a2b0
+    color: #fff
 }
 
 ::-moz-selection {
@@ -5758,7 +5758,8 @@ div#scroll .map_list li span {
         padding-bottom: 40px;
         min-height: -webkit-calc(100vh - 50px);
         min-height: calc(100vh - 50px);
-        height: auto;
+
+        height: calc(100vh - 50px);
     }
     .menu_item_img a>span {
         font-size: 11px;
@@ -5875,11 +5876,52 @@ div#scroll .map_list li span {
     }
 }
 
-@media only screen and (max-width:1281px) {
+@media only screen and (max-width:1279px) {
     footer {
         position: relative!important;
         bottom: 0;
         z-index: 100
+    }
+    .all_place .menu_item_img a>span{
+        font-size: 12px;
+    }
+    .all_place,
+    .all_place.map,
+    .details_place,
+    .details_place.map,
+    .hotel_wr,
+    .menu {
+        padding-bottom: 40px;
+        min-height: -webkit-calc(100vh - 50px);
+        min-height: calc(100vh - 50px);
+
+        height: auto!important;
+    }
+    .weather_block {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: right;
+        margin-right: 129px;
+    }
+    .control {
+        position: relative
+    }
+
+    .control:after {
+        content: "";
+        width: 100%;
+        height: 101%;
+        position: absolute;
+        z-index: 10;
+        background-color: transparent;
+        display: inline-block;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        top: 0;
+        cursor: initial
     }
 }
 
@@ -5911,3 +5953,4 @@ header .logo_span a:hover{
     color: #fff;
     text-decoration: none;
 }
+

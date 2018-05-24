@@ -13,6 +13,10 @@ jQuery(document).ready(function($){
         $('body').removeClass('search-active');
         $('.icon-close').fadeOut();
     });
+    $('.disable').click( function(){
+        e.preventDefault();
+        return false;
+    });
 
     //gallery
 
@@ -23,7 +27,7 @@ jQuery(document).ready(function($){
     //tabs
     $('.tabgroup > div').hide();
     $('.tabgroup > div:first-of-type').show();
-    $('.tabs a').click(function(e){
+    $('.tabs a').not( ".disable" ).click(function(e){
         e.preventDefault();
         var $this = $(this),
             tabgroup = '#'+$this.parents('.tabs').data('tabgroup'),
