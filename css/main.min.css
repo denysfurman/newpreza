@@ -5280,12 +5280,14 @@ div#scroll ul li {
     color: #fff
 }
 
-.tabs a:hover {
+.tabs a.act:not(disabled):hover {
     -webkit-transform: scale(.95);
     -ms-transform: scale(.95);
     transform: scale(.95)
 }
-
+.tabs a:hover{
+    color: #fff;
+}
 .tabgroup {
     margin-top: 30px
 }
@@ -5434,12 +5436,7 @@ div#scroll ul li {
     transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out
 }
 
-.map_scroll .map_top_inf a:hover {
-    -webkit-transform: scale(.95);
-    -ms-transform: scale(.95);
-    transform: scale(.95);
-    color: #30353d
-}
+
 
 div#scroll .map_list {
     display: -webkit-box;
@@ -5890,4 +5887,27 @@ div#scroll .map_list li span {
 .start_page .logo_panel {
     width: 679px;
 }
-
+header .logo_span a {
+    font-weight: 500!important;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+}
+header .logo_span a:hover{
+    color: #fff;
+}
+.button_yelow.disable:hover{
+    color: #000 ;
+}
+.tabs a.active{
+    background-image: none;
+}
+.tabs a:hover{
+    color: #fff;
+}
+.tabs a:not([href]):not([tabindex]):focus, .tabs a:not([href]):not([tabindex]):hover {
+    color: #fff;
+    text-decoration: none;
+}
